@@ -4,7 +4,7 @@ provider "aws" {
 
 module "vpc" {
   source  = "app.terraform.io/vdsec/vpc/aws"
-  version = "1.3"
+  version = "1.4"
 
   region = "${var.region}"
   environment = "${var.environment}"
