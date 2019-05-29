@@ -3,12 +3,24 @@ variable "region" {
   description = "The name of region"
 }
 
-variable "prefix" {
-  default = "paraconsistent.com"
-  description = "The name of our org, i.e. example.com."
-}
-
 variable "environment" {
   default = "dev"
   description = "The name of the environment"
+}
+
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
+  description = "VPC CIDR"
+}
+
+variable "public_subnets" {
+  type = list(string)
+  default = ["10.0.1.0/24"]
+  description = "Public Subnets"
+}
+
+variable "private_subnets" {
+  type = list(string)
+  default = ["10.0.100.0/24"]
+  description = "Private Subnets"
 }

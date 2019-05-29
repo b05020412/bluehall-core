@@ -9,7 +9,7 @@ module "vpc" {
   region = "${var.region}"
   environment = "${var.environment}"
 
-  vpc_cidr = "10.0.0.0/16"
-  public_subnets = ["10.0.1.0/24"]
-  private_subnets = ["10.0.100.0/24"]
+  vpc_cidr = "${var.vpc_cidr}"
+  public_subnets = ${var.public_subnets}
+  private_subnets = ${var.private_subnets}
 }
