@@ -4,6 +4,7 @@ provider "aws" {
 
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
+  version = "2.5.0"
 
   name = "${var.name}"
   region = "${var.region}"
