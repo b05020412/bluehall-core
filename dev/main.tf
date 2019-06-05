@@ -3,13 +3,13 @@ provider "aws" {
 }
 
 module "vpc" {
-  source  = "app.terraform.io/vdsec/vpc/aws"
-  version = "1.6"
+  source = "terraform-aws-modules/vpc/aws"
 
+  name = "${var.name}"
   region = "${var.region}"
   environment = "${var.environment}"
 
-  vpc_cidr = "${var.vpc_cidr}"
+  cidr = "${var.vpc_cidr}"
   public_subnets = "${var.public_subnets}"
   private_subnets = "${var.private_subnets}"
 }
