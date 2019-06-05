@@ -3,19 +3,13 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
-  version = "2.5.0"
+  source  = "github.com/saillinux/terraform-aws-vpc"
+  version = "1.6"
 
-  name = "${var.name}"
   region = "${var.region}"
   environment = "${var.environment}"
 
-  cidr = "${var.vpc_cidr}"
+  vpc_cidr = "${var.vpc_cidr}"
   public_subnets = "${var.public_subnets}"
   private_subnets = "${var.private_subnets}"
-  
-  tags = {
-    Terraform = "true"
-    Environment = "${var.environment}"
-  }
 }
