@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source  = "github.com/saillinux/terraform-aws-vpc"
+  source  = "github.com/b05020412/terraform-aws-vpc"
   version = "1.6"
 
   region = "${var.region}"
