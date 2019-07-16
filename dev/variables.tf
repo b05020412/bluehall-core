@@ -1,5 +1,5 @@
 variable "region" {
-  default = "us-east-1"
+  default = "cn-north-1"
   description = "The name of region"
 }
 
